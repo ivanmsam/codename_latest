@@ -1,0 +1,36 @@
+body {
+	font: 20px Myriad, Lucida Grande;
+	font-size: 1em;
+}
+
+table.board {
+	width:100%;
+	height:100vh;
+	border: 10px solid white;
+}
+
+td {
+	background:#f2f2f2;
+	width:20%;
+	height:20%;
+	text-align: center;	
+	}
+
+h1 {
+	text-align: center;
+
+}
+
+button.spyMaster {
+	display:inline-block;
+}
+
+form.seedInput {
+	display:inline-block;
+}
+
+.center {
+	margin:auto;
+	text-align: center;
+
+}
