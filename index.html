@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="CodeName.css">
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body >	
+	<h1>Welcome to Code Name</h1>
+
+	<div class="center">
+		<form class="seedInput">
+			Game Number: <input id='seed'>
+			<input id='seedButton' type="button" value="Start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);">
+		</form>
+		<button class="spyMaster" onclick="showAnswers(cardColours)">I am the Spy Master</button>
+	</div>
+
+	<table class="board">
+		<tr>
+			<td id="block0" onclick="return changeBlock(this,cardColours,0)"></td>		
+			<td id="block1" onclick="return changeBlock(this,cardColours,1)"></td>
+			<td id="block2" onclick="return changeBlock(this,cardColours,2)"></td>
+			<td id="block3" onclick="return changeBlock(this,cardColours,3)"></td>
+			<td id="block4" onclick="return changeBlock(this,cardColours,4)"></td>
+
+		</tr>
+		<tr>
+			<td id="block5" onclick="return changeBlock(this,cardColours,5)"></td>		
+			<td id="block6" onclick="return changeBlock(this,cardColours,6)"></td>
+			<td id="block7" onclick="return changeBlock(this,cardColours,7)"></td>
+			<td id="block8" onclick="return changeBlock(this,cardColours,8)"></td>
+			<td id="block9" onclick="return changeBlock(this,cardColours,9)"></td>
+
+		</tr>
+		<tr>
+			<td id="block10" onclick="return changeBlock(this,cardColours,10)"></td>
+			<td id="block11" onclick="return changeBlock(this,cardColours,11)"></td>
+			<td id="block12" onclick="return changeBlock(this,cardColours,12)"></td>
+			<td id="block13" onclick="return changeBlock(this,cardColours,13)"></td>
+			<td id="block14" onclick="return changeBlock(this,cardColours,14)"></td>
+
+		</tr>
+		<tr>
+			<td id="block15" onclick="return changeBlock(this,cardColours,15)"></td>
+			<td id="block16" onclick="return changeBlock(this,cardColours,16)"></td>
+			<td id="block17" onclick="return changeBlock(this,cardColours,17)"></td>
+			<td id="block18" onclick="return changeBlock(this,cardColours,18)"></td>
+			<td id="block19" onclick="return changeBlock(this,cardColours,19)"></td>
+
+		</tr>
+		<tr>
+			<td id="block20" onclick="return changeBlock(this,cardColours,20)"></td>
+			<td id="block21" onclick="return changeBlock(this,cardColours,21)"></td>
+			<td id="block22" onclick="return changeBlock(this,cardColours,22)"></td>
+			<td id="block23" onclick="return changeBlock(this,cardColours,23)"></td>
+			<td id="block24" onclick="return changeBlock(this,cardColours,24)"></td>
+		</tr>								
+	</table>
+
+
+	<script>
+		var seed = document.getElementById('seed').value;
+
+		var cardColours = [];
+
+		function setWords() {
+			document.getElementById('seedButton').value = 'Reset';
+			seed = document.getElementById('seed').value;	
+			var words = ["House", "Chair", "Tomato", "Mouse", "Hard Drive", "Book", "Phone", "Eggs", "Shoes", "Computers", "Plant", "Picture", "Bowl", "Frame", "Car", "Carpet", "Table", "Movie", "Television", "Playground", "Space", "Stars", "Time Travel", "Planets", "Toilet", "Washing", "Clothes"];
+
+			var currentIndex = words.length, temporaryValue, randomIndex;
+
+			// While there remain elements to shuffle...
+			while (0 !== currentIndex) {
+
+				// Pick a remaining element...
+			    randomIndex = Math.floor(random() * currentIndex);
+			    currentIndex -= 1;
+
+			    // And swap it with the current element.
+			    temporaryValue = words[currentIndex];
+			    words[currentIndex] = words[randomIndex];
+			    words[randomIndex] = temporaryValue;
+		  	}
+
+			for (i = 0; i < 25; i++) {
+				block = "block" + i;
+				word = words.pop()
+				document.getElementById(block).innerHTML = word;			
+			}
+		}
+		
+		function randomiseCardColours(array) {
+			seed = document.getElementById('seed').value;
+			
+			array = ["red", "red", "red", "red", "red", "red", "red", "red", "red", "green", "green", "green", "green", "green", "green", "green", "green", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "black"];			
+
+			var currentIndex = array.length, temporaryValue, randomIndex;
+
+			// While there remain elements to shuffle...
+			while (0 !== currentIndex) {
+
+				// Pick a remaining element...
+			    randomIndex = Math.floor(random() * currentIndex);
+			    currentIndex -= 1;
+
+			    // And swap it with the current element.
+			    temporaryValue = array[currentIndex];
+			    array[currentIndex] = array[randomIndex];
+			    array[randomIndex] = temporaryValue;
+		  	}
+
+			cardColours = array;  	
+		}	
+
+		function changeBlock(block,array,blockNumber) {
+			for (i = 0; i < 25; i++) {
+				resetBlock = "block" + i;
+				document.getElementById(resetBlock).style.fontSize = '1em';
+			}		
+			if (block.style.background == "red" || block.style.background == "green" || block.style.background == "yellow" || block.style.background == "black") {
+			} else {
+
+				cardColour = array[blockNumber]
+				block.style.background = cardColour;		
+				block.style.fontSize = '2em';
+				opac = 0.1;
+				block.style.opacity = opac;
+				var id = setInterval(fade,100);
+				function fade() {
+				if (block.style.opacity == 1.0) {
+					clearInterval(id);
+				} else {
+					opac = opac + 0.1;
+					block.style.opacity = opac;
+					}
+				}
+			}
+
+		}
+
+		function showAnswers(array) {
+			for (i = 0; i < 25; i++) {
+				block = "block" + i;
+				cardColour = array[i];
+				document.getElementById(block).style.background = cardColour;
+				document.getElementById(block).style.fontSize = '1em';
+			}
+		}
+
+		function setColourToGray() {
+			console.log('hi');
+			for (i = 0; i < 25; i++) {
+				block = "block" + i;
+				cardColour = '#f2f2f2';
+				document.getElementById(block).style.background = cardColour;
+				document.getElementById(block).style.fontSize = '1em';
+			}
+		}		
+
+		function random() {
+
+		    var x = Math.sin(seed++) * 10000;
+		    return x - Math.floor(x);
+		}
+	</script>
+
+</body>
+</html>
