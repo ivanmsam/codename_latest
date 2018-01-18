@@ -24,7 +24,7 @@
 		  	}
 
 			for (i = 0; i < 25; i++) {
-				block = "block" + i;
+				block = "blockWord" + i;
 				word = words.pop()
 				document.getElementById(block).innerHTML = word;			
 			}
@@ -33,7 +33,7 @@
 		function randomiseCardColours(array) {
 			seed = document.getElementById('seed').value;
 			
-			array = ["CodeNameCardDesign.jpg", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#ffb4b4", "#dcffdc", "#dcffdc", "#dcffdc", "#dcffdc", "#dcffdc", "#dcffdc", "#dcffdc", "#dcffdc", "#ffff87", "#ffff87", "#ffff87", "#ffff87", "#ffff87", "#ffff87", "#ffff87", "black"];			
+			array = ['url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")','url("CodeNameCardDesignBlack.jpg")'];			
 
 			var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -58,11 +58,11 @@
 				resetBlock = "block" + i;
 				document.getElementById(resetBlock).style.fontSize = '1em';
 			}		
-			if (block.style.background == "#ffb4b4" || block.style.background == "green" || block.style.background == "yellow" || block.style.background == "black") {
+			if (block.style.backgroundImage == "CodeNameCardDesignRed.jpg" || block.style.background == "green" || block.style.background == "yellow" || block.style.background == "black") {
 			} 	else {
 
 				cardColour = array[blockNumber]
-				block.style.background = cardColour;		
+				block.style.backgroundImage = cardColour;		
 				block.style.fontSize = '1.8em';
 				opac = 0.1;
 				block.style.opacity = opac;
@@ -86,7 +86,7 @@
 				if (cardColour == "black") {
 					document.getElementById(block).style.color = 'white'
 				}
-				document.getElementById(block).style.background = cardColour;
+				document.getElementById(block).style.backgroundImage = cardColour;
 				document.getElementById(block).style.fontSize = '1em';
 			}
 		}
@@ -95,8 +95,8 @@
 			console.log('hi');
 			for (i = 0; i < 25; i++) {
 				block = "block" + i;
-				cardColour = '#f2f2f2';
-				document.getElementById(block).style.background = cardColour;
+				cardBackground = 'url("CodeNameCardDesign.jpg")';
+				document.getElementById(block).style.backgroundImage = cardBackground;
 				document.getElementById(block).style.fontSize = '1em';
 			}
 		}		

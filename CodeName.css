@@ -36,3 +36,12 @@ form.seedInput {
 	text-align: center;
 
 }
+
+p {
+	font-weight: bold;
+	background-color: white;
+
+	display:inline-block;
+	background: rgba(256, 256, 256, 0.9);
+	padding: 2% 15% 2% 15%;
+}
