@@ -1,6 +1,6 @@
 body {
 	font: 20px Myriad, Lucida Grande;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 
 table.board {
@@ -10,10 +10,12 @@ table.board {
 }
 
 td {
-	background:#f2f2f2;
+	background-image:url("CodeNameCardDesign.jpg");
 	width:20%;
 	height:20%;
 	text-align: center;	
+	background-position: center;
+	background-size:150%;
 	}
 
 h1 {
