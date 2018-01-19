@@ -26,7 +26,8 @@
 			for (i = 0; i < 25; i++) {
 				block = "blockWord" + i;
 				word = words.pop()
-				document.getElementById(block).innerHTML = word;			
+				document.getElementById(block).innerHTML = word;
+				document.getElementById(block).style.background = 'rgba(256, 256, 256, 0.9)';			
 			}
 		}
 		
@@ -64,7 +65,7 @@
 				cardColour = array[blockNumber]
 				block.style.backgroundImage = cardColour;		
 				block.style.fontSize = '1.8em';
-				opac = 0.1;
+				opac = 0;
 				block.style.opacity = opac;
 				var id = setInterval(fade,100);
 				function fade() {
@@ -105,4 +106,13 @@
 
 		    var x = Math.sin(seed++) * 10000;
 		    return x - Math.floor(x);
+		}
+
+		function showAndHideRules() {
+			x = document.getElementById('rules')
+			if (x.style.display == 'block') {
+				x.style.display = 'none';
+			} else {
+				x.style.display = 'block';
+			}
 		}

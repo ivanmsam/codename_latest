@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="CodeName.css">
-	<script src="jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="CodeName.js"></script>	
 </head>
 <body >	
@@ -13,53 +13,99 @@
 			Game Number: <input id='seed'>
 			<input id='seedButton' type="button" value="Start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);">
 		</form>
-		<button class="spyMaster" onclick="showAnswers(cardColours)">I am the Spy Master</button>
+		<button class="spyMaster" onclick="showAnswers(cardColours)">Representative Power</button>
+		<button class="rules" onclick="showAndHideRules()">Rules</button>
 	</div>
 
-	<table class="board">
-		<tr>
-			<td id="block0" onclick="return changeBlock(this,cardColours,0)"><p id="blockWord0"></p></td>		
-			<td id="block1" onclick="return changeBlock(this,cardColours,1)"><p id="blockWord1"></p></td>
-			<td id="block2" onclick="return changeBlock(this,cardColours,2)"><p id="blockWord2"></p></td>
-			<td id="block3" onclick="return changeBlock(this,cardColours,3)"><p id="blockWord3"></p></td>
-			<td id="block4" onclick="return changeBlock(this,cardColours,4)"><p id="blockWord4"></p></td>
 
-		</tr>
-		<tr>
-			<td id="block5" onclick="return changeBlock(this,cardColours,5)"><p id="blockWord5"></p></td>		
-			<td id="block6" onclick="return changeBlock(this,cardColours,6)"><p id="blockWord6"></p></td>
-			<td id="block7" onclick="return changeBlock(this,cardColours,7)"><p id="blockWord7"></p></td>
-			<td id="block8" onclick="return changeBlock(this,cardColours,8)"><p id="blockWord8"></p></td>
-			<td id="block9" onclick="return changeBlock(this,cardColours,9)"><p id="blockWord9"></p></td>
+	<div class="gameBoard">
 
-		</tr>
-		<tr>
-			<td id="block10" onclick="return changeBlock(this,cardColours,10)"><p id="blockWord10"></p></td>
-			<td id="block11" onclick="return changeBlock(this,cardColours,11)"><p id="blockWord11"></p></td>
-			<td id="block12" onclick="return changeBlock(this,cardColours,12)"><p id="blockWord12"></p></td>
-			<td id="block13" onclick="return changeBlock(this,cardColours,13)"><p id="blockWord13"></p></td>
-			<td id="block14" onclick="return changeBlock(this,cardColours,14)"><p id="blockWord14"></p></td>
+			<div id="rules" class="rulesPage">
+				<span id='closeRules' onclick='showAndHideRules()'>X</span>
+				<b>RULES</b><br><br>
+				This is a game that tests the strength of you and your friends telepathic skills. <br>
+				Beware, if it's not strong, it may break your years of friendship. <br>
+				Players who disobey the following rules must take 1 shot. No exceptions.<br><br>
 
-		</tr>
-		<tr>
-			<td id="block15" onclick="return changeBlock(this,cardColours,15)"><p id="blockWord15"></p></td>
-			<td id="block16" onclick="return changeBlock(this,cardColours,16)"><p id="blockWord16"></p></td>
-			<td id="block17" onclick="return changeBlock(this,cardColours,17)"><p id="blockWord17"></p></td>
-			<td id="block18" onclick="return changeBlock(this,cardColours,18)"><p id="blockWord18"></p></td>
-			<td id="block19" onclick="return changeBlock(this,cardColours,19)"><p id="blockWord19"></p></td>
+				<b>What do you need:</b>
+				<ul>
+					<li>One large communal device with a browser. e.g. Tablet or Laptop</li>
+					<li>Two smaller devices with a browser. e.g. Smartphones</li>
+					<li>4+ players, the more the merrier.</li>
+				</ul>
+				<b>How to play:</b>
+				<ul>
+					<li>Connect all devices to: 'https://ivanmsam.github.io'.</li>
+					<li>Enter a random 3 digit number in 'Game Number' in all 3 devices and click 'Start'.</li>
+					<li>This game consist of 25 blocks: 9 x RED, 8 x GREEN, 7 x YELLOW and 1 x BLACK. </li> 
+					<li>The colours of each block is initially hidden.</li>
+					<li>The teams are split into two; the RED team and the GREEN team. </li>
+					<li>Each team elects a representative.</li>
+					<li>On their smaller individual devices, each representative click 'Representative Power'</li>
+					<li>The representative are given the power to see the colours of each block.</li>
+					<li>The representative's objective is to steer their team to select their coloured blocks.</li> 			
+					<li>The represenatives can <b>ONLY</b> say ONE word and ONE number each turn.</li>
+					<li>The represenatives must not show any expression during the game.</li>
+		
+					<li>Commencing with the RED team, each representative takes turn to say ONE word and ONE number.</li> 
+					<li>The team then needs to select a block on the large communcal device based on the word given by their representative. </li>
+					<li>The team's objective is to select their own coloured blocks.</li>
+					<li>If they select their team's colour, then they must take another turn up to the number their representative has stated.</li>
+					<li>If they select the opponent's block or a YELLOW block then their turn is over.</li>
+					<li>If they select a BLACK block then they automatically lose.
+					<li>The first team to discover all their coloured blocks wins.</li>
+				</ul>
+				<b>Penalties:</b>
+				<ul>
+					<li>If your team selects a YELLOW block: 1 Shot</li>
+					<li>If your team selects an opponent's block: 1 Shot</li>
+					<li>If your team selects a BLACK block: 3 Shots</li>
+					<li>If your team loses: 2 Shots</li>
+				</ul>
+			</div>
+	
+		<table class="board">
+			<tr>
+				<td id="block0" onclick="return changeBlock(this,cardColours,0)"><p id="blockWord0"></p></td>		
+				<td id="block1" onclick="return changeBlock(this,cardColours,1)"><p id="blockWord1"></p></td>
+				<td id="block2" onclick="return changeBlock(this,cardColours,2)"><p id="blockWord2"></p></td>
+				<td id="block3" onclick="return changeBlock(this,cardColours,3)"><p id="blockWord3"></p></td>
+				<td id="block4" onclick="return changeBlock(this,cardColours,4)"><p id="blockWord4"></p></td>
 
-		</tr>
-		<tr>
-			<td id="block20" onclick="return changeBlock(this,cardColours,20)"><p id="blockWord20"></p></td>
-			<td id="block21" onclick="return changeBlock(this,cardColours,21)"><p id="blockWord21"></p></td>
-			<td id="block22" onclick="return changeBlock(this,cardColours,22)"><p id="blockWord22"></p></td>
-			<td id="block23" onclick="return changeBlock(this,cardColours,23)"><p id="blockWord23"></p></td>
-			<td id="block24" onclick="return changeBlock(this,cardColours,24)"><p id="blockWord24"></p></td>
-		</tr>								
-	</table>
+			</tr>
+			<tr>
+				<td id="block5" onclick="return changeBlock(this,cardColours,5)"><p id="blockWord5"></p></td>		
+				<td id="block6" onclick="return changeBlock(this,cardColours,6)"><p id="blockWord6"></p></td>
+				<td id="block7" onclick="return changeBlock(this,cardColours,7)"><p id="blockWord7"></p></td>
+				<td id="block8" onclick="return changeBlock(this,cardColours,8)"><p id="blockWord8"></p></td>
+				<td id="block9" onclick="return changeBlock(this,cardColours,9)"><p id="blockWord9"></p></td>
 
+			</tr>
+			<tr>
+				<td id="block10" onclick="return changeBlock(this,cardColours,10)"><p id="blockWord10"></p></td>
+				<td id="block11" onclick="return changeBlock(this,cardColours,11)"><p id="blockWord11"></p></td>
+				<td id="block12" onclick="return changeBlock(this,cardColours,12)"><p id="blockWord12"></p></td>
+				<td id="block13" onclick="return changeBlock(this,cardColours,13)"><p id="blockWord13"></p></td>
+				<td id="block14" onclick="return changeBlock(this,cardColours,14)"><p id="blockWord14"></p></td>
 
+			</tr>
+			<tr>
+				<td id="block15" onclick="return changeBlock(this,cardColours,15)"><p id="blockWord15"></p></td>
+				<td id="block16" onclick="return changeBlock(this,cardColours,16)"><p id="blockWord16"></p></td>
+				<td id="block17" onclick="return changeBlock(this,cardColours,17)"><p id="blockWord17"></p></td>
+				<td id="block18" onclick="return changeBlock(this,cardColours,18)"><p id="blockWord18"></p></td>
+				<td id="block19" onclick="return changeBlock(this,cardColours,19)"><p id="blockWord19"></p></td>
 
+			</tr>
+			<tr>
+				<td id="block20" onclick="return changeBlock(this,cardColours,20)"><p id="blockWord20"></p></td>
+				<td id="block21" onclick="return changeBlock(this,cardColours,21)"><p id="blockWord21"></p></td>
+				<td id="block22" onclick="return changeBlock(this,cardColours,22)"><p id="blockWord22"></p></td>
+				<td id="block23" onclick="return changeBlock(this,cardColours,23)"><p id="blockWord23"></p></td>
+				<td id="block24" onclick="return changeBlock(this,cardColours,24)"><p id="blockWord24"></p></td>
+			</tr>								
+		</table>
+	</div>
 
 </body>
 </html>
