@@ -3,6 +3,11 @@
 
 		var cardColours = [];
 
+		function enableAnswer() {
+			btn = document.getElementById('representative');
+			btn.disabled = false;
+		}
+
 		function setWords() {
 			document.getElementById('seedButton').value = 'Reset';
 			seed = document.getElementById('seed').value;	

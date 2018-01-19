@@ -11,9 +11,9 @@
 	<div class="center">
 		<form class="seedInput">
 			Game Number: <input id='seed'>
-			<input id='seedButton' type="button" value="Start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);">
+			<input id='seedButton' type="button" value="Start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);enableAnswer();">
 		</form>
-		<button class="spyMaster" onclick="showAnswers(cardColours)">I'm the chosen one</button>
+		<button id="representative" class="spyMaster" onclick="showAnswers(cardColours)" disabled>I'm the chosen one</button>
 		<button class="rules" onclick="showAndHideRules()">Rules</button>
 	</div>
 
