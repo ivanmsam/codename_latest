@@ -6,7 +6,6 @@ body {
 table.board {
 	width:100%;
 	height:100vh;
-
 	border-spacing: 10px;
 }
 
@@ -17,8 +16,18 @@ td {
 	text-align: center;	
 	background-position: center;
 	background-size:100%;
-
 	}
+
+table.navigation {
+	background-size:100%;
+	border-spacing: 10px;
+	width:100%;
+}
+
+td.navigation {
+	width:50%%;
+	background-image:none;
+}
 
 h1 {
 	text-align: center;
@@ -38,10 +47,20 @@ form.seedInput {
 .center {
 	margin:auto;
 	text-align: center;
+}
+
+#seed {
+	border:none;
+	border-bottom: 1px solid black;
+	text-align: center;
+	color:grey;
+	font-size:1.5em;
+	width:110%;
+	height:2em;
 
 }
 
-p {
+p.block {
 	font-weight: bold;
 	display:inline-block;
 	background: none;
@@ -70,4 +89,38 @@ p {
 	float:right;
 	display:inline-block;
 	color:grey;
+}
+
+#representativeButton {
+	display:inline-block;
+	float:right;
+	font-weight: bold;
+	color:grey;	
+	padding-right:3%;
+}
+
+#representativeButton:hover {
+	color:black;
+}
+
+#rulesButton {
+	display:inline-block;
+	float:right;
+	font-weight:bold;
+	color:grey;
+	padding-right:3%;
+}
+
+#rulesButton:hover {
+	color:black;
+}
+
+#start {
+	padding-left:4%;
+	font-weight:bold;
+	color:grey;
+}
+
+#start:hover {
+	color:black;
 }
