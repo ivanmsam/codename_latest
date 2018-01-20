@@ -10,6 +10,10 @@ table.board {
 	table-layout:fixed; 
 }
 
+table.board td { 
+	overflow: hidden; 
+}
+
 td {
 	background-image:url("CodeNameCardDesign.jpg");
 	width:20%;
