@@ -1,6 +1,8 @@
 body {
 	font: 20px Myriad, Lucida Grande;
 	font-size: 1.5em;
+	background-color: #f2f2f2;	
+	margin:0px;
 }
 
 table.board {
@@ -8,6 +10,8 @@ table.board {
 	height:100vh;
 	border-spacing: 10px;
 	table-layout:fixed; 
+	margin:0px;
+	background-color:white;
 }
 
 table.board td { 
@@ -21,12 +25,13 @@ td {
 	text-align: center;	
 	background-position: center;
 	background-size:100%;
-	}
+}
 
 table.navigation {
 	background-size:100%;
 	border-spacing: 10px;
 	width:100%;
+
 }
 
 td.navigation {
@@ -44,8 +49,8 @@ form.seedInput {
 }
 
 .center {
-	margin:auto;
 	text-align: center;
+	margin-bottom:1em;
 }
 
 #seed {
