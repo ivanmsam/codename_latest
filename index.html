@@ -14,13 +14,15 @@
 				<td class="navigation"></td>
 				<td class="navigation">
 					<form class="seedInput">
-						<input type="text" id='seed' value='ENTER GAME NUMBER' onblur="if (this.value == ''){this.value = 'ENTER GAME NUMBER';}"" onfocus="if (this.value == 'ENTER GAME NUMBER') {this.value = '';}" >		
+						<input type="text" id='seed' value='GAME NUMBER' onblur="if (this.value == ''){this.value = 'GAME NUMBER';}"" onfocus="if (this.value == 'GAME NUMBER') {this.value = '';}" >		
 					</form>
 
-					<p id="start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);enableAnswer();">START</p>		
+					<p id="start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);enableAnswer();">
+						<a id="start" href="#board">START</a>
+					</p>		
 				</td>
 				<td class="navigation">
-					<p id="representativeButton" class="spyMaster" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</p>
+					<p id="representativeButton" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</p>
 					<p id="rulesButton" onclick="showAndHideRules()">RULES</p>
 				</td>
 		</table>
@@ -76,7 +78,7 @@
 				</ul>
 			</div>
 	
-		<table class="board">
+		<table class="board" id="board">
 			<tr>
 				<td id="block0" onclick="return changeBlock(this,cardColours,0)"><p class="block" id="blockWord0"></p></td>		
 				<td id="block1" onclick="return changeBlock(this,cardColours,1)"><p class="block" id="blockWord1"></p></td>

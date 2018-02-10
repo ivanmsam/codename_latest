@@ -30,17 +30,11 @@ table.navigation {
 }
 
 td.navigation {
-	width:50%%;
 	background-image:none;
 }
 
 h1 {
 	text-align: center;
-
-}
-
-button.spyMaster {
-	display:inline-block;
 
 }
 
@@ -55,14 +49,13 @@ form.seedInput {
 }
 
 #seed {
-	border:none;
-	border-bottom: 1px solid black;
 	text-align: center;
-	color:grey;
-	font-size:1.5em;
-	width:110%;
-	height:2em;
-
+	color:black;
+	font-size:2em;
+	height:2.5em;
+	border-radius: 5px;
+	border: solid 3px black;
+	font-weight: bold;
 }
 
 p.block {
@@ -97,7 +90,7 @@ p.block {
 }
 
 #representativeButton {
-	display:inline-block;
+
 	float:right;
 	font-weight: bold;
 	color:grey;	
@@ -109,7 +102,6 @@ p.block {
 }
 
 #rulesButton {
-	display:inline-block;
 	float:right;
 	font-weight:bold;
 	color:grey;
@@ -121,11 +113,15 @@ p.block {
 }
 
 #start {
-	padding-left:4%;
-	font-weight:bold;
-	color:grey;
+	padding-left: 0%;
+	font-weight: bold;
+	color: grey;
+	text-decoration: none;
+
 }
 
 #start:hover {
 	color:black;
 }
+
+
