@@ -68,22 +68,26 @@
 			}		
 			if (block.style.backgroundImage == 'url("CodeNameCardDesignRed.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlue.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignYellow.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlack.jpg")') {
 				if (chosenOne) {
+					
 					block.style.backgroundImage = 'url("CodeNameCardDesignGreen.jpg")';
 				}
-			} 	else {
-				cardColour = array[blockNumber]
-				block.style.backgroundImage = cardColour;		
-				block.style.fontSize = '1.8em';
-				opac = 0;
-				block.style.opacity = opac;
-				var id = setInterval(fade,100);
-				function fade() {
-				if (block.style.opacity == 1.0) {
-					clearInterval(id);
-				} 	else {
-					opac = opac + 0.1;
+			} 	else if (block.style.backgroundImage == 'url("CodeNameCardDesignGreen.jpg")') {
+					cardColour = array[blockNumber]
+					block.style.backgroundImage = cardColour;	
+				} else {
+					cardColour = array[blockNumber]
+					block.style.backgroundImage = cardColour;		
+					block.style.fontSize = '1.8em';
+					opac = 0;
 					block.style.opacity = opac;
-					}
+					var id = setInterval(fade,100);
+					function fade() {
+					if (block.style.opacity == 1.0) {
+						clearInterval(id);
+					} 	else {
+						opac = opac + 0.1;
+						block.style.opacity = opac;
+						}
 				}
 			}
 
@@ -118,4 +122,9 @@
 			} else {
 				x.style.display = 'block';
 			}
+		}
+
+		function showStart() {
+			console.log('hi');
+			document.getElementById('representativeButton').style.visibility = 'visible';
 		}

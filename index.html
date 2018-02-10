@@ -11,20 +11,25 @@
 	<div class="center">
 		<table class="navigation">
 			<tr>
-				<td class="navigation"></td>
+				<td class="navigation">
+				<p id="rulesButton" onclick="showAndHideRules()">RULES</p>		
+			</td>
 				<td class="navigation">
 					<form class="seedInput">
-						<input type="text" id='seed' value='GAME NUMBER' onblur="if (this.value == ''){this.value = 'GAME NUMBER';}"" onfocus="if (this.value == 'GAME NUMBER') {this.value = '';}" >		
+						<input type="text" id='seed' value='GAME NUMBER' 
+							onblur="if (this.value == '') {
+								this.value = 'GAME NUMBER';
+							} else {setWords();setColourToGray();randomiseCardColours(cardColours);}" 
+							onfocus="if (this.value == 'GAME NUMBER') {
+								this.value = '';
+							}" >		
 					</form>
-
-					<p id="start" onclick="setWords();setColourToGray();randomiseCardColours(cardColours);enableAnswer();">
-						<a id="start" href="#board">START</a>
-					</p>		
 				</td>
 				<td class="navigation">
-					<p id="representativeButton" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</p>
-					<p id="rulesButton" onclick="showAndHideRules()">RULES</p>
+					<p id="representativeButton" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</p>	
 				</td>
+			</tr>
+
 		</table>
 	</div>
 

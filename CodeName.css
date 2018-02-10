@@ -102,10 +102,10 @@ p.block {
 }
 
 #rulesButton {
-	float:right;
+	float:left;
 	font-weight:bold;
 	color:grey;
-	padding-right:3%;
+	padding-left:3%;
 }
 
 #rulesButton:hover {
@@ -123,5 +123,3 @@ p.block {
 #start:hover {
 	color:black;
 }
-
-
