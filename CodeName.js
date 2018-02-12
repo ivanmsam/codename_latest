@@ -42,7 +42,7 @@
 		function randomiseCardColours(array) {
 			seed = document.getElementById('seed').value;
 			
-			array = ['url("CodeNameCardDesignGreen.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")','url("CodeNameCardDesignBlack.jpg")'];			
+			array = ['url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignRed.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignBlue.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")', 'url("CodeNameCardDesignYellow.jpg")','url("CodeNameCardDesignBlack.jpg")'];			
 
 			var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -68,7 +68,6 @@
 			}		
 			if (block.style.backgroundImage == 'url("CodeNameCardDesignRed.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlue.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignYellow.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlack.jpg")') {
 				if (chosenOne) {
-					
 					block.style.backgroundImage = 'url("CodeNameCardDesignGreen.jpg")';
 				}
 			} 	else if (block.style.backgroundImage == 'url("CodeNameCardDesignGreen.jpg")') {

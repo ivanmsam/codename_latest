@@ -11,14 +11,13 @@ p {
 table.board {
 	width:100%;
 	height:100vh;
-	border-spacing: 10px;
+	border-spacing:10px;
 	table-layout:fixed; 
 	margin:0px;
 	background-color:white;
 }
 
-
-td {
+td.blocks {
 	background-image:url("CodeNameCardDesign.jpg");
 	width:20%;
 	height:20%;
@@ -28,69 +27,41 @@ td {
 }
 
 table.navigation {
-
-	border-spacing: 10px;
 	width:100%;
-}
-
-td.navigation {
-	background-image:none;
+	margin:1em;
 }
 
 table.menubar {
-	background-size:100%;
 	width:100%;
-	border:0px;
-		background-color:grey;
-}
-
-td.menubar {
-
-	background-image:none;
-	border:none;
-	font-color:blue;
+	background-color:grey;
 }
 
 h1 {
 	float:right;
-	text-align: center;
-	font-size:4em;
+	font-size:3em;
 	padding-right:3%;
 }
 
 form.seedInput {
 	display:inline-block;
-	font-size:14px;
 	float:left;
 	padding-left:3%;
 }
 
-.center {
-	text-align: center;
-	margin-bottom:1em;
-}
-
 #seed {
-	float:left;
 	text-align: center;
 	color:black;
-	font-size:4em;
+	font-size:1.7em;
 	height:2em;
 	border-radius: 5px;
 	border: solid 3px black;
 	font-weight: bold;
-
 }
 
 p.block {
 	font-weight: bold;
 	display:inline-block;
-	background: none;
 	padding: 2% 15% 2% 15%;
-}
-
-.gameboard {
-	display:relative;
 }
 
 .rulesPage {
@@ -111,7 +82,7 @@ p.block {
 	float:right;
 	display:inline-block;
 	color:grey;
-	font-size:4em;
+	font-size:3em;
 }
 
 #closeRules:hover {
