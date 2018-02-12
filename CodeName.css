@@ -1,8 +1,12 @@
 body {
 	font: 20px Myriad, Lucida Grande;
-	font-size: 1vw;
+
 	background-color: #f2f2f2;	
 	margin:0px;
+}
+
+p {
+		font-size: 1vw;
 }
 
 table.board {
@@ -36,16 +40,21 @@ table.navigation {
 
 td.navigation {
 	background-image:none;
+
 }
 
 h1 {
+	float:right;
 	text-align: center;
-
+	font-size:3em;
+	padding-right:3%;
 }
 
 form.seedInput {
 	display:inline-block;
 	font-size:14px;
+	float:left;
+	padding-left:3%;
 }
 
 .center {
@@ -54,6 +63,7 @@ form.seedInput {
 }
 
 #seed {
+	float:left;
 	text-align: center;
 	color:black;
 	font-size:2em;
@@ -61,6 +71,7 @@ form.seedInput {
 	border-radius: 5px;
 	border: solid 3px black;
 	font-weight: bold;
+
 }
 
 p.block {
@@ -95,11 +106,11 @@ p.block {
 }
 
 #representativeButton {
-
 	float:right;
+	display:inline-block;
 	font-weight: bold;
 	color:grey;	
-	padding-right:3%;
+	padding-right:5%;
 }
 
 #representativeButton:hover {
@@ -107,10 +118,11 @@ p.block {
 }
 
 #rulesButton {
-	float:left;
+	float:right;
+	display:inline-block;
 	font-weight:bold;
 	color:grey;
-	padding-left:3%;
+	padding-right:5%;
 }
 
 #rulesButton:hover {
@@ -127,4 +139,8 @@ p.block {
 
 #start:hover {
 	color:black;
+}
+
+h2 {
+	font-size:16px;
 }

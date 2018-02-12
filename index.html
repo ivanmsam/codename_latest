@@ -6,14 +6,18 @@
 	<script src="CodeName.js"></script>	
 </head>
 <body >	
-
-
 	<div class="center">
-		<h1>Welcome to CodeName</h1>	
 		<table class="navigation">
 			<tr>
+				<td class="navigation"></td>
 				<td class="navigation">
-					<p id="rulesButton" onclick="showAndHideRules()">RULES</p>		
+					<h2 id="representativeButton" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</h2>						
+					<h2 id="rulesButton" onclick="showAndHideRules()">RULES</h2>		
+				</td>
+			</tr>
+			<tr>
+				<td class="navigation">
+					<h1>KODENAME</h1>	
 				</td>
 				<td class="navigation">
 					<form class="seedInput">
@@ -26,10 +30,9 @@
 							}" >		
 					</form>
 				</td>
-				<td class="navigation">
-					<p id="representativeButton" onclick="showAnswers(cardColours)" disabled>I'M THE CHOSEN ONE</p>	
-				</td>
+
 			</tr>
+
 		</table>
 	</div>
 
