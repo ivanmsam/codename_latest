@@ -118,10 +118,14 @@
 		function showAndHideRules() {
 			x = document.getElementById('rules')
 			if (x.style.display == 'block') {
-				x.style.display = 'none';
+				closeRules();
 			} else {
 				x.style.display = 'block';
 			}
+		}
+
+		function closeRules() {
+			x.style.display = 'none';
 		}
 
 		function showStart() {

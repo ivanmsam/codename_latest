@@ -1,12 +1,11 @@
 body {
 	font: 20px Myriad, Lucida Grande;
-
 	background-color: #f2f2f2;	
 	margin:0px;
 }
 
 p {
-		font-size: 1vw;
+		font-size: 1.5vw;
 }
 
 table.board {
@@ -18,9 +17,6 @@ table.board {
 	background-color:white;
 }
 
-table.board td { 
-	overflow: hidden; 
-}
 
 td {
 	background-image:url("CodeNameCardDesign.jpg");
@@ -32,21 +28,33 @@ td {
 }
 
 table.navigation {
-	background-size:100%;
+
 	border-spacing: 10px;
 	width:100%;
-
 }
 
 td.navigation {
 	background-image:none;
+}
 
+table.menubar {
+	background-size:100%;
+	width:100%;
+	border:0px;
+		background-color:grey;
+}
+
+td.menubar {
+
+	background-image:none;
+	border:none;
+	font-color:blue;
 }
 
 h1 {
 	float:right;
 	text-align: center;
-	font-size:3em;
+	font-size:4em;
 	padding-right:3%;
 }
 
@@ -66,8 +74,8 @@ form.seedInput {
 	float:left;
 	text-align: center;
 	color:black;
-	font-size:2em;
-	height:2.5em;
+	font-size:4em;
+	height:2em;
 	border-radius: 5px;
 	border: solid 3px black;
 	font-weight: bold;
@@ -103,14 +111,19 @@ p.block {
 	float:right;
 	display:inline-block;
 	color:grey;
+	font-size:4em;
+}
+
+#closeRules:hover {
+	color:black;
 }
 
 #representativeButton {
 	float:right;
 	display:inline-block;
 	font-weight: bold;
-	color:grey;	
-	padding-right:5%;
+	color: #f2f2f2;	
+	padding-right:3%;
 }
 
 #representativeButton:hover {
@@ -121,26 +134,15 @@ p.block {
 	float:right;
 	display:inline-block;
 	font-weight:bold;
-	color:grey;
-	padding-right:5%;
+	color: #f2f2f2;
+	padding-right:3%;
 }
 
 #rulesButton:hover {
 	color:black;
 }
 
-#start {
-	padding-left: 0%;
-	font-weight: bold;
-	color: grey;
-	text-decoration: none;
-
-}
-
-#start:hover {
-	color:black;
-}
-
 h2 {
 	font-size:16px;
+	color:blue;
 }
