@@ -42,7 +42,7 @@ table.menubar {
 
 h1 {
 	float:right;
-	font-size:2.5em;
+	font-size:3em;
 	padding-right:3%;
 }
 
@@ -55,11 +55,12 @@ form.seedInput {
 #seed {
 	text-align: center;
 	color:black;
-	font-size:1.7em;
+	font-size:1.5em;
 	height:2em;
 	border-radius: 5px;
 	border: solid 3px black;
 	font-weight: bold;
+	width:90%;
 }
 
 p.block {
