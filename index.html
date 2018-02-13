@@ -41,97 +41,97 @@
 	</div>
 
 
-	<div class="gameBoard">
 
-			<div id="rules" class="rulesPage">
-				<span id='closeRules' onclick='showAndHideRules()'>X</span>
-				<b>RULES</b><br><br>
-				This is a game that tests the strength of you and your friends telepathic skills. <br>
-				Beware, if it's not strong, it may break your years of friendship. <br>
-				Players who disobey the following rules must take 1 shot. No exceptions.<br><br>
 
-				<b>What do you need:</b>
-				<ul>
-					<li>One large communal device with a browser. e.g. Tablet or Laptop</li>
-					<li>Two smaller devices with a browser. e.g. Smartphones</li>
-					<li>4+ players, the more the merrier.</li>
-					<li>A bottle of hard liquor.</li>
-					<li>Shot glasses.</li>
-					<li>Glass cup.</li>
-				</ul>
-				<b>How to play:</b>
-				<ul>
-					<li>Connect all devices to: 'https://ivanmsam.github.io'.</li>
-					<li>Enter a random 3 digit number in 'Game Number' in all 3 devices and click 'Start'.</li>
-					<li>This game consist of 25 blocks: 9 x RED, 8 x GREEN, 7 x YELLOW and 1 x BLACK. </li> 
-					<li>The colours of each block is initially hidden.</li>
-					<li>The teams are split into two; the RED team and the GREEN team. </li>
-					<li>Each team elects a representative.</li>
-					<li>On their smaller individual devices, each representative click 'I'm the chosen one'.</li>
-					<li>The representative are given the power to see the colours of each block.</li>
-					<li>The representative's objective is to steer their team to select their coloured blocks.</li> 			
-					<li>The represenatives can <b>ONLY</b> say ONE word and ONE number each turn.</li>
-					<li>The represenatives must not show any expression during the game.</li>
-		
-					<li>Commencing with the RED team, each representative takes turn to say ONE word and ONE number.</li> 
-					<li>The team then needs to select a block on the large communcal device based on the word given by their representative. </li>
-					<li>The team's objective is to select their own coloured blocks.</li>
-					<li>If they select their team's colour, then they must take another turn up to the number their representative has stated.</li>
-					<li>If they select the opponent's block or a YELLOW block then their turn is over.</li>
-					<li>If they select a BLACK block then they automatically lose.
-					<li>The first team to discover all their coloured blocks wins.</li>
-				</ul>
-				<b>Penalties:</b>
-				<ul>
-					<li>If your team selects a YELLOW block: 1 Shot</li>
-					<li>If your team selects an opponent's block: 1 Shot</li>
-					<li>If your team selects a BLACK block: Half cup</li>
-					<li>If your team loses: 2 Shots</li>
-				</ul>
-			</div>
-	
-		<table class="board" id="board">
-			<tr>
-				<td class ="blocks" id="block0" onclick="return changeBlock(this,cardColours,0)"><p class="block" id="blockWord0"></p></td>		
-				<td class ="blocks" id="block1" onclick="return changeBlock(this,cardColours,1)"><p class="block" id="blockWord1"></p></td>
-				<td class ="blocks" id="block2" onclick="return changeBlock(this,cardColours,2)"><p class="block" id="blockWord2"></p></td>
-				<td class ="blocks" id="block3" onclick="return changeBlock(this,cardColours,3)"><p class="block" id="blockWord3"></p></td>
-				<td class ="blocks" id="block4" onclick="return changeBlock(this,cardColours,4)"><p class="block" id="blockWord4"></p></td>
+	<div id="rules" class="rulesPage">
+		<span id='closeRules' onclick='showAndHideRules()'>X</span>
+		<b>RULES</b><br><br>
+		This is a game that tests the strength of you and your friends telepathic skills. <br>
+		Beware, if it's not strong, it may break your years of friendship. <br>
+		Players who disobey the following rules must take 1 shot. No exceptions.<br><br>
 
-			</tr>
-			<tr>
-				<td class ="blocks" id="block5" onclick="return changeBlock(this,cardColours,5)"><p class="block" id="blockWord5"></p></td>		
-				<td class ="blocks" id="block6" onclick="return changeBlock(this,cardColours,6)"><p class="block" id="blockWord6"></p></td>
-				<td class ="blocks" id="block7" onclick="return changeBlock(this,cardColours,7)"><p class="block" id="blockWord7"></p></td>
-				<td class ="blocks" id="block8" onclick="return changeBlock(this,cardColours,8)"><p class="block" id="blockWord8"></p></td>
-				<td class ="blocks" id="block9" onclick="return changeBlock(this,cardColours,9)"><p class="block" id="blockWord9"></p></td>
+		<b>What do you need:</b>
+		<ul>
+			<li>One large communal device with a browser. e.g. Tablet or Laptop</li>
+			<li>Two smaller devices with a browser. e.g. Smartphones</li>
+			<li>4+ players, the more the merrier.</li>
+			<li>A bottle of hard liquor.</li>
+			<li>Shot glasses.</li>
+			<li>Glass cup.</li>
+		</ul>
+		<b>How to play:</b>
+		<ul>
+			<li>Connect all devices to: 'https://ivanmsam.github.io'.</li>
+			<li>Enter a random 3 digit number in 'Game Number' in all 3 devices and click 'Start'.</li>
+			<li>This game consist of 25 blocks: 9 x RED, 8 x GREEN, 7 x YELLOW and 1 x BLACK. </li> 
+			<li>The colours of each block is initially hidden.</li>
+			<li>The teams are split into two; the RED team and the GREEN team. </li>
+			<li>Each team elects a representative.</li>
+			<li>On their smaller individual devices, each representative click 'I'm the chosen one'.</li>
+			<li>The representative are given the power to see the colours of each block.</li>
+			<li>The representative's objective is to steer their team to select their coloured blocks.</li> 			
+			<li>The represenatives can <b>ONLY</b> say ONE word and ONE number each turn.</li>
+			<li>The represenatives must not show any expression during the game.</li>
 
-			</tr>
-			<tr>
-				<td class ="blocks" id="block10" onclick="return changeBlock(this,cardColours,10)"><p class="block" id="blockWord10"></p></td>
-				<td class ="blocks" id="block11" onclick="return changeBlock(this,cardColours,11)"><p class="block" id="blockWord11"></p></td>
-				<td class ="blocks" id="block12" onclick="return changeBlock(this,cardColours,12)"><p class="block" id="blockWord12"></p></td>
-				<td class ="blocks" id="block13" onclick="return changeBlock(this,cardColours,13)"><p class="block" id="blockWord13"></p></td>
-				<td class ="blocks" id="block14" onclick="return changeBlock(this,cardColours,14)"><p class="block" id="blockWord14"></p></td>
-
-			</tr>
-			<tr>
-				<td class ="blocks" id="block15" onclick="return changeBlock(this,cardColours,15)"><p class="block" id="blockWord15"></p></td>
-				<td class ="blocks" id="block16" onclick="return changeBlock(this,cardColours,16)"><p class="block" id="blockWord16"></p></td>
-				<td class ="blocks" id="block17" onclick="return changeBlock(this,cardColours,17)"><p class="block" id="blockWord17"></p></td>
-				<td class ="blocks" id="block18" onclick="return changeBlock(this,cardColours,18)"><p class="block" id="blockWord18"></p></td>
-				<td class ="blocks" id="block19" onclick="return changeBlock(this,cardColours,19)"><p class="block" id="blockWord19"></p></td>
-
-			</tr>
-			<tr>
-				<td class ="blocks" id="block20" onclick="return changeBlock(this,cardColours,20)"><p class="block" id="blockWord20"></p></td>
-				<td class ="blocks" id="block21" onclick="return changeBlock(this,cardColours,21)"><p class="block" id="blockWord21"></p></td>
-				<td class ="blocks" id="block22" onclick="return changeBlock(this,cardColours,22)"><p class="block" id="blockWord22"></p></td>
-				<td class ="blocks" id="block23" onclick="return changeBlock(this,cardColours,23)"><p class="block" id="blockWord23"></p></td>
-				<td class ="blocks" id="block24" onclick="return changeBlock(this,cardColours,24)"><p class="block" id="blockWord24"></p></td>
-			</tr>								
-		</table>
+			<li>Commencing with the RED team, each representative takes turn to say ONE word and ONE number.</li> 
+			<li>The team then needs to select a block on the large communcal device based on the word given by their representative. </li>
+			<li>The team's objective is to select their own coloured blocks.</li>
+			<li>If they select their team's colour, then they must take another turn up to the number their representative has stated.</li>
+			<li>If they select the opponent's block or a YELLOW block then their turn is over.</li>
+			<li>If they select a BLACK block then they automatically lose.
+			<li>The first team to discover all their coloured blocks wins.</li>
+		</ul>
+		<b>Penalties:</b>
+		<ul>
+			<li>If your team selects a YELLOW block: 1 Shot</li>
+			<li>If your team selects an opponent's block: 1 Shot</li>
+			<li>If your team selects a BLACK block: Half cup</li>
+			<li>If your team loses: 2 Shots</li>
+		</ul>
 	</div>
+
+	<table class="board" id="board">
+		<tr>
+			<td class ="blocks" id="block0" onclick="return changeBlock(this,cardColours,0)"><p class="block" id="blockWord0"></p></td>		
+			<td class ="blocks" id="block1" onclick="return changeBlock(this,cardColours,1)"><p class="block" id="blockWord1"></p></td>
+			<td class ="blocks" id="block2" onclick="return changeBlock(this,cardColours,2)"><p class="block" id="blockWord2"></p></td>
+			<td class ="blocks" id="block3" onclick="return changeBlock(this,cardColours,3)"><p class="block" id="blockWord3"></p></td>
+			<td class ="blocks" id="block4" onclick="return changeBlock(this,cardColours,4)"><p class="block" id="blockWord4"></p></td>
+
+		</tr>
+		<tr>
+			<td class ="blocks" id="block5" onclick="return changeBlock(this,cardColours,5)"><p class="block" id="blockWord5"></p></td>		
+			<td class ="blocks" id="block6" onclick="return changeBlock(this,cardColours,6)"><p class="block" id="blockWord6"></p></td>
+			<td class ="blocks" id="block7" onclick="return changeBlock(this,cardColours,7)"><p class="block" id="blockWord7"></p></td>
+			<td class ="blocks" id="block8" onclick="return changeBlock(this,cardColours,8)"><p class="block" id="blockWord8"></p></td>
+			<td class ="blocks" id="block9" onclick="return changeBlock(this,cardColours,9)"><p class="block" id="blockWord9"></p></td>
+
+		</tr>
+		<tr>
+			<td class ="blocks" id="block10" onclick="return changeBlock(this,cardColours,10)"><p class="block" id="blockWord10"></p></td>
+			<td class ="blocks" id="block11" onclick="return changeBlock(this,cardColours,11)"><p class="block" id="blockWord11"></p></td>
+			<td class ="blocks" id="block12" onclick="return changeBlock(this,cardColours,12)"><p class="block" id="blockWord12"></p></td>
+			<td class ="blocks" id="block13" onclick="return changeBlock(this,cardColours,13)"><p class="block" id="blockWord13"></p></td>
+			<td class ="blocks" id="block14" onclick="return changeBlock(this,cardColours,14)"><p class="block" id="blockWord14"></p></td>
+
+		</tr>
+		<tr>
+			<td class ="blocks" id="block15" onclick="return changeBlock(this,cardColours,15)"><p class="block" id="blockWord15"></p></td>
+			<td class ="blocks" id="block16" onclick="return changeBlock(this,cardColours,16)"><p class="block" id="blockWord16"></p></td>
+			<td class ="blocks" id="block17" onclick="return changeBlock(this,cardColours,17)"><p class="block" id="blockWord17"></p></td>
+			<td class ="blocks" id="block18" onclick="return changeBlock(this,cardColours,18)"><p class="block" id="blockWord18"></p></td>
+			<td class ="blocks" id="block19" onclick="return changeBlock(this,cardColours,19)"><p class="block" id="blockWord19"></p></td>
+
+		</tr>
+		<tr>
+			<td class ="blocks" id="block20" onclick="return changeBlock(this,cardColours,20)"><p class="block" id="blockWord20"></p></td>
+			<td class ="blocks" id="block21" onclick="return changeBlock(this,cardColours,21)"><p class="block" id="blockWord21"></p></td>
+			<td class ="blocks" id="block22" onclick="return changeBlock(this,cardColours,22)"><p class="block" id="blockWord22"></p></td>
+			<td class ="blocks" id="block23" onclick="return changeBlock(this,cardColours,23)"><p class="block" id="blockWord23"></p></td>
+			<td class ="blocks" id="block24" onclick="return changeBlock(this,cardColours,24)"><p class="block" id="blockWord24"></p></td>
+		</tr>								
+	</table>
+
 
 </body>
 </html>
