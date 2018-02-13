@@ -57,11 +57,11 @@ form.seedInput {
 	text-align: center;
 	color:black;
 	font-size:1.7em;
-	height:2em;
+	height:2.5em;
 	border-radius: 5px;
 	border: solid 3px black;
 	font-weight: bold;
-	width:90%;
+	width:80%;
 }
 
 p.block {
@@ -71,12 +71,10 @@ p.block {
 }
 
 .rulesPage {
-	width:auto;
+	width:1080px;
 	padding:2%;
 	background:white;
-	position:absolute;
-	left:50%;
-	transform: translate(-50%, 0%);
+	position:relative;
 	margin:auto;
 	line-height: 1.5em;
 	font-size: 12px;
