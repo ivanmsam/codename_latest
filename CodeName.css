@@ -71,7 +71,7 @@ p.block {
 }
 
 .rulesPage {
-	width:1080px;
+
 	padding:2%;
 	background:white;
 	position:relative;
@@ -79,6 +79,7 @@ p.block {
 	line-height: 1.5em;
 	font-size: 12px;
 	display:none;
+	max-width: 100vw;
 }
 
 #closeRules {
