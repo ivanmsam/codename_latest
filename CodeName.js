@@ -66,9 +66,9 @@
 				document.getElementById(resetBlock).style.fontSize = '1em';
 			}		
 			if (block.style.backgroundImage == 'url("CodeNameCardDesignRed.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlue.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignYellow.jpg")' || block.style.backgroundImage == 'url("CodeNameCardDesignBlack.jpg")') {
-				if (chosenOne == true) {
+
 					block.style.backgroundImage = 'url("CodeNameCardDesignGreen.jpg")';
-				}
+
 			} 	else if (block.style.backgroundImage == 'url("CodeNameCardDesignGreen.jpg")') {
 					cardColour = array[blockNumber]
 					block.style.backgroundImage = cardColour;	
