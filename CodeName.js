@@ -70,24 +70,22 @@
 					block.style.backgroundImage = 'url("CodeNameCardDesignGreen.jpg")';
 				}
 			} 	else if (block.style.backgroundImage == 'url("CodeNameCardDesignGreen.jpg")') {
-					cardColour = array[blockNumber]
-					block.style.backgroundImage = cardColour;	
+					block.style.backgroundImage = array[blockNumber];	
 				} else {
-					cardColour = array[blockNumber]
-					block.style.backgroundImage = cardColour;		
+					block.style.backgroundImage = array[blockNumber];		
 					block.style.fontSize = '1.8em';
 					opac = 0;
 					block.style.opacity = opac;
 					var id = setInterval(fade,100);
 					function fade() {
-					if (block.style.opacity == 1.0) {
-						clearInterval(id);
-					} 	else {
-						opac = opac + 0.1;
-						block.style.opacity = opac;
-						}
+						if (block.style.opacity == 1.0) {
+							clearInterval(id);
+						} 	else {
+								opac = opac + 0.1;
+								block.style.opacity = opac;
+							}
+					}
 				}
-			}
 
 		}
 
@@ -131,11 +129,17 @@
 			var height = window.innerHeight;
 			console.log(width);
 			console.log(height);
+			var x = document.getElementsByClassName('blocks');				
 			if (width > height) {
-				var x = document.getElementsByClassName('blocks');
+
 				for (i = 0; i < x.length; i++) {
 					x[i].style["background-size"] = '100%';
+				}
+			} else {
+								for (i = 0; i < x.length; i++) {
+					x[i].style["background-size"] = 'auto 100%';
 				}
 			}
 
 		}
+
