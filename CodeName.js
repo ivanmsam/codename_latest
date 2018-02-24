@@ -6,7 +6,6 @@
 
 		function enableAnswer() {
 			btn = document.getElementById('representative');
-
 		}
 
 		function setWords() {
@@ -127,7 +126,16 @@
 			x.style.display = 'none';
 		}
 
-		function showStart() {
-			console.log('hi');
-			document.getElementById('representativeButton').style.visibility = 'visible';
+		function resizeImage() {
+			var width = window.innerWidth;
+			var height = window.innerHeight;
+			console.log(width);
+			console.log(height);
+			if (width > height) {
+				var x = document.getElementsByClassName('blocks');
+				for (i = 0; i < x.length; i++) {
+					x[i].style["background-size"] = '100%';
+				}
+			}
+
 		}
